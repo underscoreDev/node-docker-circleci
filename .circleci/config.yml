@@ -25,6 +25,10 @@ jobs:
             echo $DOCKERHUB_USERNAME
             echo $DOCKERHUB_PASSWORD
       - run:
+          name: Start Docker Service
+          command: |
+            docker start  
+      - run:
           name: Build docker Image
           command: |
             docker build -t simple-node .
