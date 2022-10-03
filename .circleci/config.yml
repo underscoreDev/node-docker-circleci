@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Log Out and Log in Docker
           command: |
-            docker logout && docker login        
+            docker logout && docker login -u=$DOCKERHUB_USERNAME -p=$DOCKERHUB_PASSWORD  
       - run:
           name: Tag Image with Hub
           command: |
