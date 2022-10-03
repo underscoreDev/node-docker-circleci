@@ -20,6 +20,11 @@ jobs:
           command: |
             docker --version
       - run:
+          name: Print Enviroment variables
+          command: |
+            echo $DOCKERHUB_USERNAME
+            echo $DOCKERHUB_PASSWORD
+      - run:
           name: Build docker Image
           command: |
             docker build -t simple-node .
