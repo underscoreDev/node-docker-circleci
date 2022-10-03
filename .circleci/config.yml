@@ -31,6 +31,10 @@ jobs:
           command: |
             docker build -t simple-node .
       - run:
+          name: Log Out and Log in Docker
+          command: |
+            docker logout && docker login        
+      - run:
           name: Tag Image with Hub
           command: |
             docker tag simple-node $DOCKERHUB_USERNAME/simple-node:latest
