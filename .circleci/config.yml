@@ -2,12 +2,12 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.2
 jobs:
-  build:
+  my-build:
     docker:
       - image: cimg/node:18.9.1
-    auth:
-      username: $DOCKERHUB_USERNAME
-      password: $DOCKERHUB_PASSWORD
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     steps:
       - node/install
       - checkout
